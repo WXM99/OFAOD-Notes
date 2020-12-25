@@ -194,4 +194,66 @@
 - Closing out a position means entering into the opposite trade to the original one.
 
   平仓就是承约一个与初始交易position相反的Position
+  
+- 不交割：总损益 = ± (平仓日期货价格 - 签订日期货价格)
+
+- 交割：总损益 = ± (即期价格 - 签订日期货价格)
+
+## 2.2 Specification OF A Futures Contract
+
+### 2.2.1 The Asset
+
+- 资产为商品：资产登记规定
+- 标的为金融资产：期限问题
+
+### 2.2.2 Contract Size
+
+- 定义交割资产的数量
+  - 太大：持有小规模position的交易对手难以进行交易
+  - 太小：交易成本的overhead太高
+- 合约取决于潜在的客户需求
+  - 农产品：asset价值 10k-20k USD
+  - 金融产品：1000k
+
+### 2.2.3 Delivery Arrangement
+
+- 交易所指定的地点
+- 其他地点的交割价格与到产地的距离正相关
+
+### 2.2.4 Delivery Months
+
+- 交割区间一般为整个月
+- 交易所上市的期货合约只包含最近交割月的和其后的合约
+- 交易所指定每个月合约开始和结束的交易日（交割日期的前几天将停止交易）
+
+### 2.2.5 Price Quotes
+
+### 2.2.6 Price Limits and Position Limits
+
+- Price Limits： 交易所涨跌停
+- Position Limits：投资者最大可持有的合约数量
+
+## 2.3 CONVERGENCE OF FUTURES PRICE TO SPOT PRICE <br> 期货价格收敛到即期价格
+
+- Delivery period中，futures price > spot price:
+
+  1. 卖出高价的Short Futures Contract
+  2. 买入低价的Assets
+  3. 等待交割套利
+
+  - Profit: Futures Price - Spot Price
+
+    => short futures更多承约
+
+    => futures price下跌
+
+- Vice Versa
+
+  ![image-20201225170202777](readme.assets/image-20201225170202777.png)
+
+## 2.4 THE OPERATION OF MARGIN ACCOUNTS<br> 保证金账户
+
+期货交易风险：退出交易、承约能力。交易所通过保证金账户机制规避违约风险。
+
+### 2.4.1 Daily Settlement
 
