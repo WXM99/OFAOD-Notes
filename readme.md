@@ -255,5 +255,25 @@
 
 期货交易风险：退出交易、承约能力。交易所通过保证金账户机制规避违约风险。
 
-### 2.4.1 Daily Settlement
+### 2.4.1 Daily Settlement 每日结算
+
+- 投资者从最初开仓交易时以合约为单位存初始保证金Initial Margin到Margin Account 
+- 每日结算 == Marketing to Market: 每个交易日结束时，Margin Account的金额数量都会得到调整，反映投资者盈亏
+- CALLer 当前保证金 = 上个交易日保证金 + (FuturePrice - SpotPrice) × TotalFutureSize
+- Long & Short Postition的保证金总和不变
+- Maintenance Margin：当Margin Account低于Maintenance Margin时，投资者收到MarginCall，缴纳Variation Margin已达到Initial Margin. 否者合约被平仓
+- 与spot market相比，future market具有对称性：多头和空头的承约是对等的
+
+### 2.4.3 The Clearing House and Its Members
+
+- Clearing House: Intertmediary
+  - 记录每天的交易记录，计算每个结算会员的net position
+  - 非会员必须通过会员开展业务员，在会员处缴纳保证金
+- Clearing House要求会员提供初始结算保证金，反映了需要结算的所有合约的总数量
+  - 没有维持保证金的要求
+  - 会员处理的交易盈亏后，清算中心增减保证金
+
+### 2.4.4 Credit Risk
+
+
 
