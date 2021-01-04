@@ -275,5 +275,13 @@
 
 ### 2.4.4 Credit Risk
 
+保证funds可以支付traders的营收
+
+## 2.5 OTC Market
+
+场外交易没有margin sys，需要别的机制规避Credit Risk
+
+### 2.5.1 Central Counterparties 中央交易对手 CCP
+
 
 
