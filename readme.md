@@ -283,5 +283,97 @@
 
 ### 2.5.1 Central Counterparties 中央交易对手 CCP
 
+- CCP是OTC的Clearing House
+- CCP Members 对应 Clearing House Members：Initial Margin和Daily Variation Margin； Guaranty Fund
+- CCP同时是同一产品交易双反的交易对手
+  - 在Maturity Date按照Price买入Asset
+  - 卖出Asset
+  - ==同时承担双方的信用风==
+- Business：
+  - Members' Initial Margin
+  - Value transactions
+  - Payments and Charge DVM
+- 非CCP Member通过CCP进行OTC交易
+
+### 2.5.2 Bilateral Clearing 双边结算
+
+- CCP\Clearing House是一种centralized transaction model
+
+- 不能通过CCP的结算产品需要通过P2P的双边结算
+
+- 通过双方签署覆盖二者所有交易的主协议完成：Credit Support Annex CSA 信用支持附件
+
+  - CSA要求双方提供抵押品Collateral，类似于CCP的Margin
+  - CSA要求每日交易定价从而增减Margin
+
+- Collateral减少了信用风险
+
+  ![image-20210106144622203](readme.assets/image-20210106144622203.png)
+
+  
+
+
+
+### 2.5.3 Futures Trades & OTC Trades 结算方式差异
+
+- Futures Trade Clearing House要求现金保证金，每日结算，为初始保证金提供利息
+- OTC的CCP\CSA 不是每日结算，利用Collateral抵押，不会赚取利息
+  - Collateral常常是各种Security
+  - Security的抵押金额不如其市值，降低的数量为Haircut
+
+## Market Quotes <br> 市场报价
+
+- Table Top:
+
+  - Underlying Assets 标的资产
+  - Contract Size 合约规模
+  - Price Quote Way 报价方式（单位）
+
+- Table Schema  ==on a trade day==
+
+  | Assets                | Contract Size | Unit |      |                  |            |        |        |
+  | --------------------- | ------------- | ---- | ---- | ---------------- | ---------- | ------ | ------ |
+  | Maturity Date (Month) | Open          | High | Low  | Prior Settlement | Last Trade | Change | Volume |
+
+### 2.6.1 Prices
+
+- 一个交易日内
+  - Open 开盘价，交易开始后立即成交的合约价格
+  - High 最高价
+  - Low 最低价
+
+### 2.6.2 Settlement Price 结算价格
+
+- Prior Settlement：上一个交易日的合约结算价格
+
+  - 结算价格Settlement Price：
+
+    每个交易日最后成交的合约价格，用于清算每天的盈亏和保证金数量
+
+- Last Trade: 最新的成交价格
+
+- Change: Last Trade - Prior Settlemet，作用在Margin上
+
+### 2.6.3 Trading Volume and Open Interest
+
+- Volume: 前一个交易日成交的对应合约总量
+
+- Open Interest: the number of contracts outstanding 
+
+  未平仓的合约数量=空头合约的总和=多头合约的总和
+
+### 2.6.4 Patterns of Futures
+
+- 根据Underlying Assets的种类和特性
+  - Normal Market: Settlement Price是Maturity的增函数
+  - Inverted Market: Settlement Price是Maturity的减函数 
+  - 混合：不同Maturity阶段的增减性质不一样
+
+## 2.7 Delivery 交割
+
+
+
+
+
 
 
