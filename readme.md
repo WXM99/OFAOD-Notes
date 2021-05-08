@@ -1,6 +1,6 @@
 # FID-Notes
 
-## 1. Preface
+# 1. Preface
 
 - Derivative & Subject Matter
 
@@ -193,7 +193,7 @@
 
 - Closing out a position means entering into the opposite trade to the original one.
 
-  平仓就是承约一个与初始交易position相反的Position
+  平仓就是承约一个与初始交易Position相反的Position
   
 - 不交割：总损益 = ± (平仓日期货价格 - 签订日期货价格)
 
@@ -243,7 +243,7 @@
 
   - Profit: Futures Price - Spot Price
 
-    => short futures更多承约
+    => short futures 更多承约
 
     => futures price下跌
 
@@ -288,7 +288,7 @@
 - CCP同时是同一产品交易双反的交易对手
   - 在Maturity Date按照Price买入Asset
   - 卖出Asset
-  - ==同时承担双方的信用风==
+  - ==同时承担双方的信用风险==
 - Business：
   - Members' Initial Margin
   - Value transactions
@@ -321,7 +321,7 @@
   - Collateral常常是各种Security
   - Security的抵押金额不如其市值，降低的数量为Haircut
 
-## Market Quotes <br> 市场报价
+## 2.6 Market Quotes <br> 市场报价
 
 - Table Top:
 
@@ -371,9 +371,69 @@
 
 ## 2.7 Delivery 交割
 
+交割的可能性决定了最终期货的价格。
+
+合约中会规定：
+
+- First Notice Day: 可以向交易所提交交个意向的第一天。
+- Last Notice Day: 可以向交易所提交交个意向的最后一天。 
+- Last Trading Day: 最后的可交易日
+
+为了避免接收交割的风险，Long Position Holder必须在First Notice Day之前平常合约。
+
+### 2.7.1 Cash Settlement 现金结算
+
+某些金融期货（e.g. 股指期货）结算方式为现金，合约中指定的结算价格是某个交易日的开盘/收盘spot price，导致直接交割几乎不会发生。
+
+## 2.8 Types of traders and orders 交易员和交易指令的类型
+
+- Futures Commission Broker (FCM)：期货佣金经纪人
+
+  执行他人的交易指令收取佣金
+
+- Local：自营经纪人
+
+  用自身账户的资金交易
+
+- Position Holder：
+  - Hedger
+  - Speculator
+    - Scalper 短期投机者 minute-level
+    - Day Trader 短线交易员 within one day
+    - Position Trader 头寸交易员 macro market trend
+  - Arbitrageurs
+
+### 2.8.1 Orders 指令
+
+- Market Order：以当前市场最好的价格（market price）马上进行交易
+- Limit Order：给定一个交易价格，IFF market price达到改价格或优于改价格时执行交易指令 （Trigger）
+- Stop Order aka. Stop-Loss Order：market price达到或劣于给定价格时执行（作为Market Order挂牌）
+- Stop-Limit Order：SO封装LO，SO触发时转变为LO（双向Trigger）
 
 
 
+## 2.11 Forward vs. Futures Contracts
 
+![image-20210508165329964](readme.assets/image-20210508165329964.png)
 
+### 2.11.1 Profits
+
+- Forward：Profit只在合约到期时进行结算和实现
+- Future：Daily Settlement使得Profit每日结算和实现
+  - Profit分布在持有合约的每一天
+
+### 2.11.2 FX Quotes
+
+在Future和Forward市场上的汇率报价不同。
+
+# 3. Hedging Strategies Using Futures
+
+- Long\Short Position的抉择
+- Contract的制定
+- 最佳Position的制定
+- hedge-and-forget strategy：静态策略
+- dynamic hedging strategy
+- Forward与Future：通过Trailing（an adjustment）进行调节转换。
+
+## 3.1 Basic Principles
 
