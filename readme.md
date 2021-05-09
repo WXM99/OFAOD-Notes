@@ -437,3 +437,34 @@
 
 ## 3.1 Basic Principles
 
+目的：选择Position使得风险尽量呈中性
+
+### 3.1.1 Short Hedge
+
+- 已经拥有某种资产，期望在未来卖出资产
+- 通过进入的空头期货价格和规模提前锁定收益
+- 达成空头后，收益与市价不再相关
+  - CONST （期货损益 + 未来资产交易损益）
+
+### 3.1.2 Long Hedge 
+
+- 未来需要买入一定资产并锁定价格
+
+## 3.2 Arguments
+
+从行业全局考虑对冲策略
+
+## 3.3 Basis Risk
+
+Practically:
+
+1. 对冲价格风险的资产与期货合约标的资产不完全一致
+2. 不确定资产买卖时间
+3. 期货合约平仓时间提前
+
+### 3.3.1 Basis 基差
+
+> def: Basis = Spot price of asset to be hedged - Futures price of contract used
+>
+> 基差是被对冲资产的即期价格减去用于对冲的期货合约价格
+
