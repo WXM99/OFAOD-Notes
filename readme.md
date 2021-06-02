@@ -466,5 +466,27 @@ Practically:
 
 > def: Basis = Spot price of asset to be hedged - Futures price of contract used
 >
+> $$SpotPrice - FuturesPrice$$
+>
 > 基差是被对冲资产的即期价格减去用于对冲的期货合约价格
+
+- 期货到期时（交割时），期货价格收敛于即期价格，Basis = 0
+- 交割前，Basis为正数或负数
+- 当通过持有与未来交易行为相同的期货合约进行对冲时
+  - For Short Position Holder最后卖出的收益为：期货合约价格+未来的（交易日）基差
+  - For Long Position Holder最后买入的付出为：期货合约价格+未来的（交易日）基差
+  - 基差的值  aka 基差风险 Basis Risk
+- Basis Risk can lead to an improvement or a worsening of hedger‘s position （取决于Position）
+  - LongPosition：BasisRisk增加则买入成本增加
+  - ShortPosition：BasisRisk增加则卖出收益增加
+
+### 3.3.2 Choice of Contract
+
+- Long/Short Position
+- Delivery Month
+- Assets
+
+## 3.4 Cross Hedging
+
+
 
